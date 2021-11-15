@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Issue Added-ZESCO</title>
+ <link rel="stylesheet" type="text/css" href=/css/styles.css>
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body style = "background-color: #90EE90;">
+	<!-- <div id="regSuccess">
+	<div>
+	
+	<h3> You have added issue successfully</h3>
+	<h4><a th:href="@{/issues}">Click here to view Issues</a></h4>
+	</div>
+	</div> -->
+	
+	<br>
+
+	<div class="container">
+	<div class="card">
+  <h5 class="card-header">You have added an issue successfully</h5>
+  <div class="card-body">
+    <h5 class="card-title">You can return and add more issues</h5>
+    <a th:href="@{/issues}" class="btn btn-success">Click here to add more issues</a>
+  </div>
+</div>
+</div>
+	
+
+</body>
+</html>

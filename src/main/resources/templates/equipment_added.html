@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Equipment Added-ZESCO</title>
+ <link rel="stylesheet" type="text/css" href=/css/styles.css>
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+	<!--  <div id="regSuccess">
+	<div>
+	
+	<h3> You have added equipment successfully</h3>
+	<h4><a th:href="@{/equipments}">Click here to view Equipments</a></h4>
+	</div>
+	</div> -->
+	
+		<div class="container">
+	<div class="card">
+  <h5 class="card-header">You have added equipment successfully</h5>
+  <div class="card-body">
+    <h5 class="card-title">You can return and add more equipment</h5>
+    <a th:href="@{/equipments}" class="btn btn-success">Click here to add more equipment</a>
+  </div>
+</div>
+</div>
+	
+	
+
+</body>
+</html>

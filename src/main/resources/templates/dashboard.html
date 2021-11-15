@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th = "http://www.thymleaf.org">
+
+<head>
+<meta charset="ISO-8859-1">
+<title>Home</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+  <nav>
+            <div class="navigation">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a th:href="@{/about}">About us</a></li>
+                    <li><a th:href="@{/equipments}">Equipment</a></li>
+                    <li><a th:href="@{/issues}">Issues</a></li>
+                    <li><a th:href="@{/logout}">Logout</a></li>
+                    <li><b>Welcome [[${#request.userPrincipal.principal.fullName}]]</b></li>
+                </ul>
+               
+            </div>
+        </nav>
+
+<body>
+<br>
+<div class="container">
+<div class="jumbotron">
+  <h1 class="display-4 ">Welcome to the ZESCO Issue Tracking App</h1>
+  <hr class="my-4">
+</div>
+</div>
+
+</body>
+</html> 
+
+
+  
+</body>
+</html>

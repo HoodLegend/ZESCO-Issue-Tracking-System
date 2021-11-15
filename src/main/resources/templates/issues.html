@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Issues-ZESCO</title>
+ <link rel="stylesheet" type="text/css" href=/css/styles.css>
+ <link rel="stylesheet" type="text/css" href=/css/style.css>
+</head>
+ <nav>
+            <div class="navigation">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a th:href="@{/about}">About us</a></li>
+                    <li><a th:href="@{/equipments}">Equipment</a></li>
+                    <li><a th:href="@{/issues}">Issues</a></li>
+                    <li><a th:href="@{/logout}">Logout</a></li>
+                    <li><b>Welcome [[${#request.userPrincipal.principal.fullName}]]</b></li>
+                </ul>
+               
+            </div>
+        </nav>
+<body>
+<!-- <div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="/open_dashboard">Home</a>
+  <a href="#">Issues</a>
+  <a th:href="@{/equipments}">Equipments</a>
+  <a th:href="@{/about}">About Us</a>
+   <a th:href="@{/logout}">Logout</a>
+</div> -->
+
+
+
+<!-- <div id="main" class= "container">
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
+ <div id="username">
+		<div>
+				<p>
+				Welcome <b id="name">[[${#request.userPrincipal.principal.fullName}]] </b>
+				</p>
+			
+		</div>		
+		
+</div>
+</div> -->
+
+	
+
+<!-- <script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+}
+</script> -->
+
+<h2 id="addEquip">Add Issues </h2>
+
+<div id="form">
+<form th:action="@{/process_issues}"   method ="post" 
+th:object="${issues}"  style="border:1px solid #ccc"  >
+ <div >
+
+
+  <label for="equipment">Equipment:</label>
+  
+        <input list="availableEquipments" placeholder="Click here to see available equipment" 
+        style="width:285px " th:field="*{equipment}" required>
+        <datalist id="availableEquipments">
+            <option th:each="users : ${listEquipments}"
+             th:value="${users.name}"
+             th:text="${users.id}"/>
+            
+        </datalist>
+        
+<!-- 		 <input type="availableEquipment"  th:field="*{equipment}"> -->
+<!--  	<select name="equpipments" id="availableEquipment"> -->
+<!-- 		<option th:each="users : ${listEquipments}" -->
+<!-- 				th:value="${users.name}" -->
+<!-- 				th:text="${users.name}"> -->
+<!-- 		</option> -->
+<!-- 	</select> -->
+<br>
+    <label for="issueDescr"><b>Description</b></label>
+    <input type="text" style= "height: 110px"placeholder="Enter Issues Description Here" 
+    name="issueDescr" th:field ="*{description}" required maxlength="250">
+    
+ 	<label for="location"><b>Location</b></label>
+    <input type="text" style=  "height: 30px;color: #000000" placeholder="Enter Location Here" 
+    name="locationName" th:field ="*{location}" required maxlength="45" >
+ 
+   
+    <div class="clearfix">
+     <button type="submit" class="signupbtn">Save</button>
+      <button type="button" class="cancelbtn">Cancel</button>
+     
+    </div>
+  </div>
+</form>
+</div>
+
+<h2 id="availableEquip">Available Issues </h2>
+<div class="table-wrapper" id="availEquip">
+	<table>
+	<thead>
+		<tr>
+			<th>No</th>
+			<th>Name</th>
+			<th>Description</th>
+			<th>Location</th>
+		</tr>
+	</thead>
+	
+	<tbody>
+		<tr th:each="issues: ${listIssues}" >
+			<td th:text="${issues.id}">Equipments No</td>
+			<td th:text="${issues.equipment}">Equipments Name</td>
+			<td th:text="${issues.description}">Equipments Description</td>
+			<td th:text="${issues.location}">Equipments Location</td>
+		</tr>
+	</tbody>
+	</table>
+</div>
+	
+</body>
+</html>

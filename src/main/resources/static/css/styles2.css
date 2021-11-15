@@ -1,0 +1,339 @@
+@charset "ISO-8859-1";
+
+* {box-sizing: border-box}
+#welcome{
+	
+	text-align:center;
+	font-family: timeNewRoman;
+	height: 14%;
+  width: 100%;
+  position: fixed ;
+  z-index: 1;
+  top: 0;
+  left: 0;
+
+  transition: 1s;
+  padding-top: 10px;
+	background-color: orange;
+	
+	
+}
+#register{
+	
+	font-family: timeNewRoman;
+	background-color: orange;
+	
+	
+}
+#text_reg{
+	text-align: center;
+	color: white;
+}
+#regForm{
+	
+
+	color: black;
+	z-index: 3;
+	font-size:20px;
+	padding-top: 10%;
+  
+ 
+}
+#regSuccess{
+	  height: 15%;
+  width: 100%;
+  position: fixed ;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: orange;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 10px;
+}
+#text{
+	color: white;
+}
+#top{
+	text-align: center;
+	color: black;
+	z-index: 3;
+	font-size:20px;
+	padding-top: 10%;
+}
+
+
+#logoutButton{
+	width: 10%
+}
+
+
+body {
+  font-family: "timeNewRoman", sans-serif;
+  background: orange;
+
+}
+
+
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: orange;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #000000;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+.container{
+	  height: 12%;
+  width: 100%;
+  position: fixed ;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: orange;
+ 
+  transition: 0.5s;
+  padding-top: 10px;
+}
+
+#username{
+	  
+  position: fixed;
+  z-index: 1;
+  left: 65%;
+  font-size: 30px;
+  top: -2%;
+  overflow-x: hidden;
+  padding-top: 0px;
+   
+
+}
+#name{
+	color: white;
+	font-style: italic;
+}
+
+#addEquip{
+	position: fixed;
+  z-index: 1;
+  left: 40%;
+  font-size: 30px;
+  top: 10%;
+  padding-top: 0px;
+}
+
+#form{
+	z-index: 2;
+	top: 20%;
+	position: fixed;
+	left: 30%;
+}
+
+/* Full-width input fields */
+  input[type=text], input[type=text] {
+  width: 100%;
+  height: 50%;
+  padding: 5px;
+  margin: 5px 0 5px 0;
+  display: compact;
+  border: none;
+  background: #f1f1f1;
+}
+ input[type=email], input[type=password] {
+  width: 100%;
+  height: 50%;
+  padding: 5px;
+  margin: 5px 0 5px 0;
+  display: compact;
+  border: none;
+  background: #f1f1f1;
+}
+
+
+hr {
+  border: 5px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: orange;
+  color: white;
+  padding: 14px 20px;
+  margin: 0px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+button:hover {
+  opacity:3;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  padding: 14px 20px;
+  background-color: #f44336;
+}
+
+/* Float cancel and signup buttons and add an equal width */
+.cancelbtn, .signupbtn {
+  float: left;
+  width: 50%;
+}
+
+
+
+
+/* Clear floats */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+#availableEquip{
+	z-index: 2;
+	top: 62%;
+	position: fixed;
+	left: 40%;
+}
+#availEquip{
+	z-index: 2;
+	top: 70%;
+	position: fixed;
+	left: 30%;
+	
+}
+
+#studentDetails{
+	z-index: 0;
+	top: 40;
+	position:relative;
+	left: 40%;
+	
+}
+#aboutDev{
+	z-index: 0;
+	top: 60%;
+	position:relative;
+	padding-top:50px;
+	left: 40%;
+}
+
+#logo{
+		z-index: 2;
+	top: 20%;
+	position: fixed;
+	left: 40%;
+}
+
+#welcomeText{
+	height:20%;
+	width:50%;
+	z-index: 2;
+	top: 45%;
+	position: fixed;
+	left: 30%;	
+  padding: 25px;
+  color: white;
+   border: 5px solid white;
+   text-align: center;
+}
+
+table{
+	overflow-y:scroll;
+   height:160px;
+   display:inline-block;
+   width: 500px;
+   font-family: arial, sans-serif;
+  border-collapse: collapse;
+}
+td, th {
+  border: 1px solid #000000;
+  text-align: left;
+  padding: 8px;
+  size: 100px;
+}
+th{
+	background: #dddddd;
+}
+
+@media only screen and (max-width:1024px) {
+	
+	#welcome{
+	
+	text-align:center;
+	font-family: timeNewRoman;
+	height: 5%;
+  width: 100%;
+  position: fixed ;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  transition: 1s;
+  padding-top: 10px;
+	
+	
+}
+
+#top{
+	text-align: center;
+	color: black;
+	z-index: 3;
+	font-size:20px;
+	padding-top: 10%;
+	top: 75%;
+}
+	
+}
+
+/* Style the video: 100% width and height to cover the entire window */
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+
